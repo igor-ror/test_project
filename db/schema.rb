@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_08_131843) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_08_132604) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "fishes", force: :cascade do |t|
+  create_table "fish", force: :cascade do |t|
     t.string "name"
     t.integer "weight"
     t.integer "age"
@@ -22,10 +22,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_08_131843) do
     t.bigint "habitat_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["age"], name: "index_fishes_on_age"
-    t.index ["area"], name: "index_fishes_on_area"
-    t.index ["habitat_id"], name: "index_fishes_on_habitat_id"
-    t.index ["name", "weight"], name: "index_fishes_on_name_and_weight"
+    t.index ["age"], name: "index_fish_on_age"
+    t.index ["area"], name: "index_fish_on_area"
+    t.index ["habitat_id"], name: "index_fish_on_habitat_id"
+    t.index ["name", "weight"], name: "index_fish_on_name_and_weight"
   end
 
   create_table "habitats", force: :cascade do |t|
