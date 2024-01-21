@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_20_104119) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_21_165244) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -35,6 +35,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_20_104119) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "lock_version"
+    t.index ["max_deep"], name: "index_habitats_on_max_deep", where: "(max_deep > 500)"
   end
 
 end
