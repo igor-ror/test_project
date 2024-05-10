@@ -68,3 +68,5 @@ group :test do
 end
 
 gem "sidekiq", "~> 7.2"
+gem 'dry-initializer', '~> 3.1'
+gem 'dry-types', '~> 1.7'
